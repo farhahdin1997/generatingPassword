@@ -57,17 +57,23 @@ function generatePassword() {
     console.log("Special Character " + cSpecial);
 
   };
+
 //If none of these options were selected an alert message will appear
   // No answer then
   if (!cLower && !cUpper && !cNumber && !cSpecial) {
     Choices = alert("You must choose a criteria");
   }
 
+//Generating the password after selecting the prompts
+
+
+
+
   // Empty variable for the password lenght
   var passwordBlank = [];
   
   // Loop for random selection
-  for (var i = 0; i < passwordLength; i++) {
+  for (var i = 0; i < passLength; i++) {
     var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
     passwordBlank.push(allChoices);
     console.log(allChoices);

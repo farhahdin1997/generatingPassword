@@ -2,11 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 //Declaring Variables
 var passLength;
-var lower;
-var upper;
-var number;
-var special;
-var choices;
+var CLower;
+var CUpper;
+var CNumber;
+var CSpecial;
+var Choices;
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -36,20 +36,27 @@ function generatePassword() {
   passLength = prompt("How many characters would you like your password? Choose between 8 and 128");
   console.log("Password length " + passLength); 
   //Else if the user doesn't input a alert message will show
-  if(!passwordLength) {
+  if(!passLength) {
     alert("Required value");
 
   }
-  // Giving the password a length between 8 and 128 characters
-  // Ask the user to input a number between 8 and 128
+  
  else if (passLength < 8 || passLength > 128) {
     passLength = prompt("You must choose between 8 and 128");
-    console.log("Password length " + passLength);
-}
-}
+    console.log("Password length " + passLength);}
 
+//Generate prompts to allow users to choose if they want upper , lower ,special and numbers in the password
+ else { 
+    cLower = confirm("Will this contain lower case letters?");
+    console.log("Lower case " + cLower);
+    cUpper = confirm("Will this contain upper case letters?");
+    console.log("Upper case " + cUpper);
+    cNumber = confirm("Will this contain numbers?");
+    console.log("Number " + cNumber);
+    cSpecial = confirm("Will this contain special characters?");
+    console.log("Special Character " + cSpecial);
 
-
+  };
 
   // Empty variable for the password lenght
   var passwordBlank = [];
@@ -66,3 +73,4 @@ function generatePassword() {
   console.log("Your Pasword is: " + password);
   return password;
   
+}

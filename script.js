@@ -2,11 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 //Declaring Variables
 var passLength;
-var CLower;
-var CUpper;
-var CNumber;
-var CSpecial;
-var Choices;
+var lower;
+var upper;
+var number;
+var special;
+var choices;
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -42,9 +42,9 @@ function generatePassword() {
   }
   // Giving the password a length between 8 and 128 characters
   // Ask the user to input a number between 8 and 128
- else if (passwordLength < 8 || passwordLength > 128) {
-    passwordLength = prompt("You must choose between 8 and 128");
-    console.log("Password length " + passwordLength);
+ else if (passLength < 8 || passLength > 128) {
+    passLength = prompt("You must choose between 8 and 128");
+    console.log("Password length " + passLength);
 }
 }
 

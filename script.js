@@ -40,7 +40,7 @@ function generatePassword() {
     alert("Required value");
 
   }
-  
+  //creating a length for the password and allowing users to input 
  else if (passLength < 8 || passLength > 128) {
     passLength = prompt("You must choose between 8 and 128");
     console.log("Password length " + passLength);}
@@ -57,6 +57,11 @@ function generatePassword() {
     console.log("Special Character " + cSpecial);
 
   };
+//If none of these options were selected an alert message will appear
+  // No answer then
+  if (!cLower && !cUpper && !cNumber && !cSpecial) {
+    Choices = alert("You must choose a criteria");
+  }
 
   // Empty variable for the password lenght
   var passwordBlank = [];

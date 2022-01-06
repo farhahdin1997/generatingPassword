@@ -1,23 +1,22 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+//Declaring Variables
 var passLength;
 var CLower;
 var CUpper;
 var CNumber;
 var CSpecial;
 var Choices;
-
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// Var To Upper Case ------------
+
+// Converting to uppercase 
 var blankU = [];
 var toUpper = function (x) {
   return x.toUpperCase();
 };
 upperCase = lowerCase.map(toUpper);
-//--------------------------------------
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
 // Write password to the #password input
 function writePassword() {
@@ -31,17 +30,26 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Start Function
+//Generating password function
 function generatePassword() {
-  // Ask four user Input
+  // Ask for the user to input 
   passLength = prompt("How many characters would you like your password? Choose between 8 and 128");
-  console.log("Password length " + passLength);
-  
+  console.log("Password length " + passLength); 
+  //Else if the user doesn't input a alert message will show
   if(!passwordLength) {
     alert("Required value");
 
   }
-  
+  // Giving the password a length between 8 and 128 characters
+  // Ask the user to input a number between 8 and 128
+ else if (passwordLength < 8 || passwordLength > 128) {
+    passwordLength = prompt("You must choose between 8 and 128");
+    console.log("Password length " + passwordLength);
+}
+}
+
+
+
 
   // Empty variable for the password lenght
   var passwordBlank = [];
@@ -58,4 +66,3 @@ function generatePassword() {
   console.log("Your Pasword is: " + password);
   return password;
   
-}

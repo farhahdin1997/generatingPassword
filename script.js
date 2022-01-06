@@ -12,8 +12,16 @@ var convertToUpper = function (x) {
 };
 upperCase = lowerCase.map(ConvertToUpper);
 
-
-
+//Generating password function
+function generatePassword() {
+    // Ask for the users Input if the user doesn't input it will show an alert message
+    passwordLength = prompt("How many characters would you like your password? Choose between 8 and 128");
+    console.log("Password length " + passwordLength);
+    
+    if(!passwordLength) {
+      alert("Required value");
+    }
+}
 
 
 // Write password to the #password input

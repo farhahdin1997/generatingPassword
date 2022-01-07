@@ -1,8 +1,9 @@
 
 Password Generator
 
-Description
-This application generates a random password based on user-selected criteria.
+
+Description 
+Create a programme that generates a random password based on the user's preferences. This app will run in the browser and use your JavaScript code to dynamically change the HTML and CSS. It will also have a sophisticated user experience and will be responsive, meaning it will adjust to different screen sizes.
 
 App functions
 GIVEN I need a new, secure password
